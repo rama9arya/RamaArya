@@ -3,92 +3,111 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rama Arya — Curriculum Vitae</title>
-  <meta name="description" content="Curriculum Vitae of Rama Arya — Yoga researcher and teacher." />
+  <title>Dr. Rama Arya — Curriculum Vitae</title>
+  <meta name="description" content="Curriculum Vitae of Dr. Rama Arya — Yoga researcher and teacher." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    /* Clean professional styling */
+    /* Professional, print-friendly resume style */
     :root{
       --accent:#0b6e4f;
-      --muted:#555;
-      --bg:#f6f7f9;
+      --muted:#5c6b64;
+      --bg:#f5f7f6;
       --card:#ffffff;
-      --shadow:0 8px 28px rgba(12,15,20,0.06);
-      --maxw:1000px;
+      --shadow:0 12px 40px rgba(12,15,20,0.06);
+      --maxw:1100px;
       --radius:12px;
-      --gap:20px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    html,body{height:100%;margin:0;background:var(--bg);color:#111}
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
-    header{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-    .avatar{width:110px;height:110px;border-radius:10px;flex:0 0 110px;overflow:hidden;background:#e9f6f0;display:flex;align-items:center;justify-content:center}
+    html,body{height:100%;margin:0;background:var(--bg);color:#102018}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:20px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .top{display:flex;gap:22px;align-items:center;padding:28px 32px;border-bottom:1px solid #eef2ef}
+    .avatar{width:120px;height:120px;border-radius:10px;overflow:hidden;flex:0 0 120px;background:#eaf6f0}
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    .title{flex:1;min-width:0}
-    h1{font-size:22px;margin:0 0 6px 0}
-    .meta{color:var(--muted);font-size:13px;line-height:1.35}
-    .contact{margin-top:8px;font-size:13px;color:var(--muted)}
-    .actions{display:flex;gap:10px;margin-left:auto}
-    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:none;cursor:pointer;display:inline-block}
+    .header-body{flex:1;min-width:0}
+    h1{margin:0;font-size:24px;font-weight:700;font-family:Merriweather, serif}
+    .tagline{color:var(--muted);margin-top:6px;font-size:14px}
+    .contact{margin-top:10px;font-size:13px;color:var(--muted)}
+    .actions{display:flex;gap:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:none;cursor:pointer}
     .btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-    hr.sep{border:none;border-top:1px solid #eee;margin:18px 0}
-    .grid{display:grid;grid-template-columns:1fr 340px;gap:26px}
-    @media(max-width:980px){.grid{grid-template-columns:1fr}}
+
+    /* layout */
+    .content{display:grid;grid-template-columns:1fr 320px;gap:32px;padding:28px}
+    @media(max-width:980px){.content{grid-template-columns:1fr;padding:18px}}
+
+    /* sections */
     section{margin-bottom:16px}
-    section h2{color:var(--accent);font-size:15px;margin:0 0 8px 0}
-    .cvtable{width:100%;border-collapse:collapse;font-size:14px}
-    .cvtable td{padding:6px 8px;border-bottom:1px dashed #eee;vertical-align:top}
+    section h2{color:var(--accent);font-size:15px;margin:0 0 8px 0;font-weight:700}
+    .muted{color:var(--muted);font-size:13px}
+    .cvtable{width:100%;border-collapse:collapse}
+    .cvtable td{padding:8px 6px;border-bottom:1px dashed #eef2ef;vertical-align:top;font-size:14px}
+    .right{color:var(--muted);font-size:13px;text-align:right;white-space:nowrap}
     .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .pill{background:#eef9f2;border-radius:999px;padding:6px 10px;font-size:13px;color:#064e3b}
-    ul{margin:6px 0 12px 18px}
-    .small{font-size:13px;color:var(--muted)}
-    a{color:var(--accent)}
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-    .right{color:var(--muted);font-size:13px}
-    .langtable td{padding:4px 8px}
+    .pill{background:#edf8f3;border-radius:999px;padding:6px 10px;font-size:13px;color:#0a5a3f}
+
+    /* sidebar */
+    aside .card-inside{background:transparent;padding:0}
+    .side-section{padding-bottom:10px;border-bottom:1px solid #f0f4f2;margin-bottom:12px}
+    .langtable td{padding:4px 6px}
+
+    /* navigation */
+    .toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .toc a{font-size:13px;color:var(--accent);text-decoration:none;border:1px solid #e8efe9;padding:6px 10px;border-radius:8px}
+
+    /* print styles */
+    @media print{
+      body{background:#fff}
+      .wrap{max-width:800px;margin:0}
+      .actions{display:none}
+      .card{box-shadow:none;border-radius:0}
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
 
-      <!-- Header -->
-      <header>
+      <!-- Top header -->
+      <div class="top">
         <div class="avatar" aria-hidden="true">
-          <!-- Filename should be exactly: Rama Profile.jpg (spaces allowed). GitHub serves it as Rama%20Profile.jpg -->
-          <img src="Rama%20Profile.jpg" alt="Dr. Rama Arya — Photo" onerror="this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent),#065a43);font-size:28px&quot;>RA</div>'">
+          <img src="Rama%20Profile.jpg" alt="Dr. Rama Arya" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent),#065a43);font-size:28px\'>RA</div>'">
         </div>
 
-        <div class="title">
-          <h1>Rama Arya</h1>
-          <div class="meta">Researcher — Yoga &amp; Integrative Health</div>
+        <div class="header-body">
+          <h1>Dr. Rama Arya</h1>
+          <div class="tagline">Researcher — Yoga & Integrative Health</div>
           <div class="contact">
-            DOB: 15th August, 1990 &nbsp; • &nbsp; Sanjata, Barmer Rural, Barmer, Rajasthan – 344703<br>
-            Mobile: +91 9999247080 &nbsp; • &nbsp; <a href="mailto:rama9arya@gmail.com">rama9arya@gmail.com</a><br>
-            ORCID: <a href="https://orcid.org/0009-0005-1802-1322" target="_blank" rel="noopener">0009-0005-1802-1322</a>
+            DOB: 15 August 1990 • Sanjata, Barmer Rural, Barmer, Rajasthan – 344703<br>
+            Mobile: +91 9999247080 • <a href="mailto:rama9arya@gmail.com">rama9arya@gmail.com</a> • ORCID: <a href="https://orcid.org/0009-0005-1802-1322" target="_blank">0009-0005-1802-1322</a>
+          </div>
+
+          <div class="toc" aria-hidden="false">
+            <a href="#profile">Profile</a>
+            <a href="#research-interests">Research</a>
+            <a href="#experience">Experience</a>
+            <a href="#publications">Publications</a>
+            <a href="#presentations">Presentations</a>
+            <a href="#education">Education</a>
           </div>
         </div>
 
-        <div class="actions" role="navigation" aria-label="Actions">
+        <div class="actions">
           <a class="btn" href="Rama_Arya_CV_2025.pdf" download>Download PDF</a>
-          <button class="btn secondary" onclick="window.print()">Print / Save as PDF</button>
+          <button class="btn secondary" onclick="window.print()">Print / Save PDF</button>
         </div>
-      </header>
+      </div>
 
-      <hr class="sep" />
-
-      <div class="grid">
-        <!-- Main column -->
+      <!-- Content -->
+      <div class="content">
         <main>
 
-          <section>
+          <section id="profile">
             <h2>Profile</h2>
-            <p>
-              Researcher in Yoga and Integrative Health specializing in the psychophysiology of <strong>Prāṇāyāma</strong>, Mind-Body Typology (<em>Prakṛti</em>), and Āyurveda-based interventions for chronic disorders. Experienced in EEG-based research, cardiac autonomic function testing, and clinical Yoga protocols. Studied <strong>Vyāsa’s Commentary on the Pātañjala Yoga Sūtra</strong> under the guidance of Swami Vidyapradānanda, integrating classical insights with scientific perspectives. Deeply interested in allied textual traditions such as <em>Āgama, Vedānta, Upaniṣad</em>, and <em>Tantra</em>, with a focus on their convergence in spiritual psychology and mind-body harmony.
-            </p>
+            <p class="muted">Researcher in Yoga and Integrative Health specializing in the psychophysiology of <strong>Prāṇāyāma</strong>, Mind-Body Typology (<em>Prakṛti</em>), and Āyurveda-based interventions for chronic disorders. Experienced in EEG-based research, cardiac autonomic function testing, and clinical Yoga protocols. Studied <strong>Vyāsa’s Commentary on the Pātañjala Yoga Sūtra</strong> under the guidance of Swami Vidyapradānanda, integrating classical insights with scientific perspectives. Deep interest in allied textual traditions such as <em>Āgama, Vedānta, Upaniṣad</em>, and <em>Tantra</em>.</p>
           </section>
 
-          <section>
+          <section id="research-interests">
             <h2>Research Interests</h2>
             <ul>
               <li>Psychophysiological effects of Pranayama and Kumbhaka</li>
@@ -99,17 +118,17 @@
             </ul>
           </section>
 
-          <section>
+          <section id="experience">
             <h2>Research Experience</h2>
-            <table class="cvtable" aria-label="Research Experience">
+            <table class="cvtable">
               <tr><td><strong>Effect of various Yogic Breathing Techniques on Cardiac Autonomic Functions: A Transdiagnostic Study on Healthy Adults with different Body-Mind Prakṛti</strong></td><td class="right">PhD — Ongoing</td></tr>
               <tr><td><strong>A Systematic Review on Paṃcakarma Based Āyurveda Treatment in Knee Osteoarthritis (Jānu Saṃdhigata Vāta)</strong></td><td class="right">MPhil — Completed</td></tr>
             </table>
           </section>
 
-          <section>
+          <section id="publications">
             <h2>Publications & Manuscripts</h2>
-            <table class="cvtable" aria-label="Publications">
+            <table class="cvtable">
               <tr><td>Interconnectedness of Causes of Suffering: Sāmkhya, Yoga and Āyurveda</td><td class="right">Manuscript Preparation</td></tr>
               <tr><td>Kanda, Nāḍī and Nāḍīśodhana : Perspectives from Yoga, Vedānta and Tantra</td><td class="right">Submitted — Yoga Mimamsa</td></tr>
               <tr><td>Mapping Tridoṣa Prakṛti to Anthropometric Somatotype and Body Composition: A Cross-sectional Study</td><td class="right">Submitted — Advances in Mind Body Medicine</td></tr>
@@ -118,113 +137,101 @@
             </table>
           </section>
 
-          <section>
+          <section id="presentations">
             <h2>Paper Presentations</h2>
-            <table class="cvtable" aria-label="Paper Presentations">
-              <tr><td>Perspectives on and Practices of Nāḍī Śodhana in Yogic Literature</td><td class="right">ICPR Sponsored One Day International Seminar — Dept. of Sanskrit & NSS Unit 2, University of Gour Banga, Malda — 30/07/2025</td></tr>
-              <tr><td>Effect of various Yogic Breathing Techniques on Cardiac Autonomic Functions: A Transdiagnostic Study on Healthy Adults with different Body-Mind Prakṛti</td><td class="right">Departmental Research Colloquium, Dept. of Sports Science & Yoga, RKMVERI — 23/12/2024</td></tr>
-              <tr><td>Science of Kumbhaka</td><td class="right">Departmental Research Colloquium, Dept. of Sports Science & Yoga, RKMVERI — 15/05/2024</td></tr>
-              <tr><td>Comparative Treatment Outcomes of Knee Osteoarthritis using Ayurveda: A Systematic Review</td><td class="right">National Youth Conference on IKS (G-20 University Connect Program), IIT Roorkee — 25/08/2023</td></tr>
-              <tr><td>EEG Signatures Change During Unilateral Yogi Nasal Breathing by Niazi et al.</td><td class="right">Departmental Research Colloquium, RKMVERI — 11/08/2023</td></tr>
-              <tr><td>Interconnectedness of causes of suffering — Sāmkhya, Yoga and Āyurveda</td><td class="right">National Yoga Conference on Yoga Sastra, Vivekananda Rock Memorial & Centre for Yoga and Naturopathy, Mahatma Gandhi University, Kerala — 26/02/2022</td></tr>
-              <tr><td>The concept of Āhāra: An Ayurvedic and Yogic Perspective</td><td class="right">Two Days National Seminar on ‘Role of Yoga in Modern Age Problems’, Yoga Centre, MLSU, Udaipur — 16/07/2021</td></tr>
+            <table class="cvtable">
+              <tr><td>Perspectives on and Practices of Nāḍī Śodhana in Yogic Literature</td><td class="right">ICPR One Day International Seminar — University of Gour Banga, Malda — 30 Jul 2025</td></tr>
+              <tr><td>Effect of various Yogic Breathing Techniques on Cardiac Autonomic Functions</td><td class="right">Departmental Research Colloquium, RKMVERI — 23 Dec 2024</td></tr>
+              <tr><td>Science of Kumbhaka</td><td class="right">Departmental Research Colloquium, RKMVERI — 15 May 2024</td></tr>
+              <tr><td>Comparative Treatment Outcomes of Knee Osteoarthritis using Ayurveda: A Systematic Review</td><td class="right">National Youth Conference on IKS, IIT Roorkee — 25 Aug 2023</td></tr>
+              <tr><td>EEG Signatures Change During Unilateral Yogi Nasal Breathing by Niazi et al.</td><td class="right">Departmental Research Colloquium, RKMVERI — 11 Aug 2023</td></tr>
+              <tr><td>Interconnectedness of causes of suffering — Sāmkhya, Yoga and Āyurveda</td><td class="right">National Yoga Conference on Yoga Sastra — 26 Feb 2022</td></tr>
+              <tr><td>The concept of Āhāra: An Ayurvedic and Yogic Perspective</td><td class="right">Two Days National Seminar, MLSU Udaipur — 16 Jul 2021</td></tr>
             </table>
           </section>
 
-          <section>
+          <section id="teaching">
             <h2>Teaching Experience</h2>
-            <table class="cvtable" aria-label="Teaching Experience">
+            <table class="cvtable">
               <tr><td>Choudhary Balaram Memorial Secondary School, Hanumangarh — Yoga Teacher</td><td class="right">25/07/2015 – 24/07/2017</td></tr>
-              <tr><td>Vishwa Yog Bharti, Education & Holistic Welfare Society, Sri Ganganagar — Yoga & Naturopathy Expert</td><td class="right">01/08/2017 – 13/12/2018</td></tr>
-            </table>
-          </section>
-
-          <section>
-            <h2>Talks Delivered</h2>
-            <table class="cvtable" aria-label="Talks Delivered">
-              <tr><td>Ayurvedic Yoga Therapy</td><td class="right">Three Day Yoga Camp — RKMVERI & Manipur University, Imphal — 05/04/2025</td></tr>
-              <tr><td>Pranayama techniques to live longer</td><td class="right">Three Day Yoga Camp — RKMVERI & Manipur University, Imphal — 03/04/2025</td></tr>
-              <tr><td>How to Breathe to Live Longer: An Ayurveda & Yoga View</td><td class="right">Two Day Yoga Camp — RKMVERI & IIM Ranchi — 09/02/2025</td></tr>
-              <tr><td>Yogasana Capsule for Digestive Disorders</td><td class="right">Two Day Yoga Camp — RKMVERI & IIM Ranchi — 11/02/2024</td></tr>
-              <tr><td>Role of Sun Worship in Ancient Indian Lifestyle</td><td class="right">Two Day International Seminar on ‘Sun Resurgence and Bharata’ — BHU — 24/09/2023</td></tr>
+              <tr><td>Vishwa Yog Bharti, Sri Ganganagar — Yoga & Naturopathy Expert</td><td class="right">01/08/2017 – 13/12/2018</td></tr>
             </table>
           </section>
 
         </main>
 
-        <!-- Sidebar -->
         <aside>
-          <section>
-            <h2>Education</h2>
-            <table class="cvtable" aria-label="Education">
-              <tr><td><strong>Doctor of Philosophy (Yoga)</strong></td><td class="right">RKMVERI, Howrah</td></tr>
-              <tr><td><strong>NET - JRF (Yoga)</strong></td><td class="right">UGC, New Delhi — 2022 — 69.0%</td></tr>
-              <tr><td><strong>Master of Philosophy (Yoga)</strong></td><td class="right">RKMVERI, Howrah — 2022 — 77.0%</td></tr>
-              <tr><td><strong>Master Diploma in Panchagavya Therapy</strong></td><td class="right">BSS, Chennai — 2018 — 78.4%</td></tr>
-              <tr><td><strong>Master of Arts (Yoga)</strong></td><td class="right">UOU, Haldwani — 2017 — 67.0%</td></tr>
-              <tr><td><strong>Diploma in Ayurveda Medical Science</strong></td><td class="right">BSS, Chennai — 2017 — 88.4%</td></tr>
-              <tr><td><strong>Diploma in Naturopathy & Yogic Science</strong></td><td class="right">ABPCP, New Delhi — 2016 — 70.3%</td></tr>
-              <tr><td><strong>Post Graduate Diploma (Yoga)</strong></td><td class="right">DSVV, Haridwar — 2015 — 75.1%</td></tr>
-              <tr><td><strong>B.Sc. (CS, Maths & Psycho)</strong></td><td class="right">DSVV, Haridwar — 2014 — 61.3%</td></tr>
-              <tr><td><strong>Senior Secondary Examination (PCM)</strong></td><td class="right">Rajasthan Board — 2010 — 58.2%</td></tr>
-              <tr><td><strong>Secondary Examination</strong></td><td class="right">Gujarat Board — 2006 — 88.4%</td></tr>
-            </table>
-          </section>
+          <div class="card-inside">
 
-          <section>
-            <h2>Trainings & Workshops</h2>
-            <div class="small">(Selected)</div>
-            <ul>
-              <li>Vyasa’s Commentary of Pātañjala Yoga Sūtra — Learning under supervision of my Guru Swami Vidyapradānanda — Ongoing</li>
-              <li>UGC-MMTTP Short Term Course on Indian Knowledge System for Research Scholars — BHU — 04/02/2025–09/02/2025</li>
-              <li>NPTEL workshop: Clinical Neurophysiology Techniques (EEG) — IIT Madras (SWAYAM) — 15/03/2025–16/03/2025</li>
-              <li>Traditional & Philosophical Aspects of Yoga — Jadavpur University — 23/11/2024–02/12/2024</li>
-              <li>Bharat Yoga Mala & National Seminar on Science of Yoga — Kaivalyadhama & Visva-Bharati — 26/05/2024</li>
-              <li>Science of Pranayama — Dept. of Sports Science & Yoga, RKMVERI — 01/06/2023–15/06/2023</li>
-              <li>Observership-cum-Training, Dept. of Integrative Medicine — NIMHANS, Bengaluru — 02/01/2023–23/03/2023</li>
-              <li>Basic Course in Yoga for Mental Health — NIMHANS — 01/02/2023–28/02/2023</li>
-              <li>Primer on Tobacco Cessation — Dept. of Psychiatry, NIMHANS — 25/01/2023–24/02/2023</li>
-              <li>International workshop: Sun Worship & Resurgence of Bharat — 23/09/2023–24/09/2023</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>Skills</h2>
-            <div class="skills" role="list">
-              <div class="pill">EEG, HRV & Psychophysiological Analysis</div>
-              <div class="pill">SPSS & R</div>
-              <div class="pill">Systematic Review (PRISMA)</div>
-              <div class="pill">Manuscript preparation & scientific writing</div>
-              <div class="pill">Ayurveda assessment (Prakṛti, Panchakarma)</div>
-              <div class="pill">Yoga therapy module design and implementation</div>
+            <div class="side-section">
+              <h2 id="education">Education</h2>
+              <table class="cvtable">
+                <tr><td><strong>Doctor of Philosophy (Yoga)</strong></td><td class="right">RKMVERI, Howrah</td></tr>
+                <tr><td><strong>NET - JRF (Yoga)</strong></td><td class="right">UGC, New Delhi — 2022 — 69.0%</td></tr>
+                <tr><td><strong>Master of Philosophy (Yoga)</strong></td><td class="right">RKMVERI, Howrah — 2022 — 77.0%</td></tr>
+                <tr><td><strong>Master Diploma in Panchagavya Therapy</strong></td><td class="right">BSS, Chennai — 2018 — 78.4%</td></tr>
+                <tr><td><strong>Master of Arts (Yoga)</strong></td><td class="right">UOU, Haldwani — 2017 — 67.0%</td></tr>
+                <tr><td><strong>Diploma in Ayurveda Medical Science</strong></td><td class="right">BSS, Chennai — 2017 — 88.4%</td></tr>
+                <tr><td><strong>Diploma in Naturopathy & Yogic Science</strong></td><td class="right">ABPCP, New Delhi — 2016 — 70.3%</td></tr>
+                <tr><td><strong>Post Graduate Diploma (Yoga)</strong></td><td class="right">DSVV, Haridwar — 2015 — 75.1%</td></tr>
+                <tr><td><strong>B.Sc. (CS, Maths & Psycho)</strong></td><td class="right">DSVV, Haridwar — 2014 — 61.3%</td></tr>
+                <tr><td><strong>Senior Secondary (PCM)</strong></td><td class="right">Rajasthan Board — 2010 — 58.2%</td></tr>
+                <tr><td><strong>Secondary Examination</strong></td><td class="right">Gujarat Board — 2006 — 88.4%</td></tr>
+              </table>
             </div>
-          </section>
 
-          <section>
-            <h2>Languages</h2>
-            <table class="langtable" role="table" aria-label="Languages">
-              <tr><td>Hindi</td><td>Read • Write • Understand • Speak</td></tr>
-              <tr><td>English</td><td>Read • Write • Understand • Speak</td></tr>
-              <tr><td>Sanskrit</td><td>Read • Write • (Limited Speaking)</td></tr>
-              <tr><td>Bengali</td><td>Understand</td></tr>
-              <tr><td>Gujarati</td><td>Read • Write • Understand • Speak</td></tr>
-            </table>
-          </section>
-
-          <section>
-            <h2>Contact & Links</h2>
-            <div class="small">
-              Email: <a href="mailto:rama9arya@gmail.com">rama9arya@gmail.com</a><br>
-              ORCID: <a href="https://orcid.org/0009-0005-1802-1322" target="_blank" rel="noopener">0009-0005-1802-1322</a>
+            <div class="side-section">
+              <h2>Trainings & Workshops</h2>
+              <div class="small">(Selected)</div>
+              <ul>
+                <li>Vyasa’s Commentary of Pātañjala Yoga Sūtra — supervised by Swami Vidyapradānanda — Ongoing</li>
+                <li>UGC-MMTTP Short Term Course on Indian Knowledge System — BHU — Feb 2025</li>
+                <li>NPTEL workshop: Clinical Neurophysiology Techniques — IIT Madras — Mar 2025</li>
+                <li>Traditional & Philosophical Aspects of Yoga — Jadavpur University — Nov 2024</li>
+                <li>Bharat Yoga Mala & National Seminar on Science of Yoga — Kaivalyadhama — May 2024</li>
+                <li>Science of Pranayama — RKMVERI — Jun 2023</li>
+                <li>Observership-cum-Training, Integrative Medicine — NIMHANS — 02/01/2023–23/03/2023</li>
+                <li>Basic Course in Yoga for Mental Health — NIMHANS — Feb 2023</li>
+                <li>Primer on Tobacco Cessation — NIMHANS — 2023</li>
+              </ul>
             </div>
-          </section>
 
+            <div class="side-section">
+              <h2>Skills</h2>
+              <div class="skills">
+                <div class="pill">EEG, HRV & Psychophysiological Analysis</div>
+                <div class="pill">SPSS & R</div>
+                <div class="pill">Systematic Review (PRISMA)</div>
+                <div class="pill">Manuscript preparation & scientific writing</div>
+                <div class="pill">Ayurveda assessment (Prakṛti, Panchakarma)</div>
+                <div class="pill">Yoga therapy module design</div>
+              </div>
+            </div>
+
+            <div class="side-section">
+              <h2>Languages</h2>
+              <table class="langtable">
+                <tr><td>Hindi</td><td class="right">Read • Write • Understand • Speak</td></tr>
+                <tr><td>English</td><td class="right">Read • Write • Understand • Speak</td></tr>
+                <tr><td>Sanskrit</td><td class="right">Read • Write • (Limited speaking)</td></tr>
+                <tr><td>Bengali</td><td class="right">Understand</td></tr>
+                <tr><td>Gujarati</td><td class="right">Read • Write • Understand • Speak</td></tr>
+              </table>
+            </div>
+
+            <div>
+              <h2>Contact & Links</h2>
+              <div class="small">Email: <a href="mailto:rama9arya@gmail.com">rama9arya@gmail.com</a><br>
+              ORCID: <a href="https://orcid.org/0009-0005-1802-1322" target="_blank">0009-0005-1802-1322</a></div>
+            </div>
+
+          </div>
         </aside>
       </div>
 
-      <footer>
+      <footer style="padding:18px 28px;border-top:1px solid #f0f4f2">
         <div class="small">Declaration: I solemnly declare that all the above information is correct to the best of my knowledge and belief.</div>
-        <div style="margin-top:10px;font-weight:600"> (Rama Arya)</div>
+        <div style="margin-top:10px;font-weight:600">(Rama Arya)</div>
       </footer>
 
     </div>
