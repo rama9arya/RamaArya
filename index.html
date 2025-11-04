@@ -20,7 +20,7 @@
     }
     html,body{height:100%;margin:0;background:var(--bg);color:#111}
     .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;display:block}
     header{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
     .avatar{width:110px;height:110px;border-radius:10px;flex:0 0 110px;overflow:hidden;background:#e9f6f0;display:flex;align-items:center;justify-content:center}
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
@@ -32,8 +32,23 @@
     .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:none;cursor:pointer;display:inline-block}
     .btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
     hr.sep{border:none;border-top:1px solid #eee;margin:18px 0}
-    .grid{display:grid;grid-template-columns:1fr 340px;gap:26px}
-    @media(max-width:980px){.grid{grid-template-columns:1fr}}
+
+    /* Grid layout */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 340px; /* left flexible, right fixed */
+      gap:26px;
+      align-items: start;              /* align items at top */
+    }
+    /* Ensure the sidebar stretches to match the main column height */
+    .grid > aside {
+      align-self: stretch;
+    }
+
+    @media(max-width:980px){
+      .grid{grid-template-columns:1fr}
+    }
+
     section{margin-bottom:16px}
     section h2{color:var(--accent);font-size:15px;margin:0 0 8px 0}
     .cvtable{width:100%;border-collapse:collapse;font-size:14px}
@@ -46,6 +61,16 @@
     footer{margin-top:18px;color:var(--muted);font-size:13px}
     .right{color:var(--muted);font-size:13px}
     .langtable td{padding:4px 8px}
+
+    /* Print styles: single column and compact */
+    @media print{
+      .grid{grid-template-columns:1fr;gap:8px;padding:0}
+      .card{box-shadow:none;border-radius:0;padding:12px}
+      .actions{display:none}
+    }
+
+    /* Small polish: prevent tiny right-scroll due to rounding */
+    html,body{overflow-x:hidden}
   </style>
 </head>
 <body>
@@ -172,15 +197,15 @@
           <section>
             <h2>Trainings & Workshops</h2>
             <table class="cvtable" aria-lable="Training & Workshops">
-              <tr><td>UGC-MMTTP Short Term Course on Indian Knowledge System for Research Scholars — BHU — 04/02/2025–09/02/2025</tr></td>
-              <tr><td>NPTEL workshop: Clinical Neurophysiology Techniques (EEG) — IIT Madras (SWAYAM) — 15/03/2025–16/03/2025</tr></td>
-              <tr><td>Traditional & Philosophical Aspects of Yoga — Jadavpur University — 23/11/2024–02/12/2024</tr></td>
-              <tr><td>Bharat Yoga Mala & National Seminar on Science of Yoga — Kaivalyadhama & Visva-Bharati — 26/05/2024</tr></td>
-              <tr><td>Science of Pranayama — Dept. of Sports Science & Yoga, RKMVERI — 01/06/2023–15/06/2023</tr></td>
-              <tr><td>Observership-cum-Training, Dept. of Integrative Medicine — NIMHANS, Bengaluru — 02/01/2023–23/03/2023</tr></td>
-              <tr><td>Basic Course in Yoga for Mental Health — NIMHANS — 01/02/2023–28/02/2023</tr></td>
-              <tr><td>Primer on Tobacco Cessation — Dept. of Psychiatry, NIMHANS — 25/01/2023–24/02/2023</tr></td>
-             <tr><td>International workshop: Sun Worship & Resurgence of Bharat — 23/09/2023–24/09/2023</tr></td>
+              <tr><td>UGC-MMTTP Short Term Course on Indian Knowledge System for Research Scholars — BHU — 04/02/2025–09/02/2025</td></tr>
+              <tr><td>NPTEL workshop: Clinical Neurophysiology Techniques (EEG) — IIT Madras (SWAYAM) — 15/03/2025–16/03/2025</td></tr>
+              <tr><td>Traditional & Philosophical Aspects of Yoga — Jadavpur University — 23/11/2024–02/12/2024</td></tr>
+              <tr><td>Bharat Yoga Mala & National Seminar on Science of Yoga — Kaivalyadhama & Visva-Bharati — 26/05/2024</td></tr>
+              <tr><td>Science of Pranayama — Dept. of Sports Science & Yoga, RKMVERI — 01/06/2023–15/06/2023</td></tr>
+              <tr><td>Observership-cum-Training, Dept. of Integrative Medicine — NIMHANS, Bengaluru — 02/01/2023–23/03/2023</td></tr>
+              <tr><td>Basic Course in Yoga for Mental Health — NIMHANS — 01/02/2023–28/02/2023</td></tr>
+              <tr><td>Primer on Tobacco Cessation — Dept. of Psychiatry, NIMHANS — 25/01/2023–24/02/2023</td></tr>
+              <tr><td>International workshop: Sun Worship & Resurgence of Bharat — 23/09/2023–24/09/2023</td></tr>
             </table>
           </section>
 
